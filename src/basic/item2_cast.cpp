@@ -109,7 +109,7 @@ static void reinterpret_cast_test() {
   // 戻り値の型が違うので，コンパイルが通らない．
   //FuncPtr funcPtr = &func1;
 
-  // FuncPtrのシグニチャに合わせてあげると，OK！
+  // reinterpret_cast を使って FuncPtrのシグニチャに合わせてあげると，OK！
   FuncPtr funcPtr = reinterpret_cast<FuncPtr>(&func1);
   funcPtr();
 }

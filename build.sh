@@ -2,10 +2,14 @@
 
 export CC=/usr/bin/clang CXX=/usr/bin/clang++
 
-mkdir build
+if [ ! -e ./build ]; then
+  mkdir build
+fi
 
 cd build
 
 cmake ../
 
 make
+
+cd ../
